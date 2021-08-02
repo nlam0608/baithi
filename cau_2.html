@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Câu2 Viết hàm tryRemoveFromArray() nhận vào một mảng các số nguyên, và một số nguyên x.
+    // Hàm  trả về mảng ban đầu nếu không có số nguyên x trong mảng.
+    // Nếu tìm thấy số nguyên x trả về mảng sau khi xóa các số nguyên x đó.
+
+    let array = [4, 6, 8, 3, 10];
+
+    function tryRemoveFromArray(arr, x) {
+
+        for (let i = 0; i < arr.length; i++) {
+            if (x == arr[i]) {
+                arr.splice(arr[i]).value;
+
+            }
+        }
+        arr.push(x).value;
+        return arr;
+    }
+
+    let x = parseInt(prompt("nhập số :"))
+    alert(tryRemoveFromArray(array, x));
+
+</script>
+</body>
+</html>

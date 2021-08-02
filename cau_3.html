@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Viết hàm isFibonacci() nhận vào một số nguyên ,
+    // trả về true nếu số đó là số nằm trong dãy Fibonacci và false nếu không nằm trong dãy Fibonacci.
+
+    function checkFibonacci(num) {
+        let numberA = 1;
+        let numberB = 0;
+        let temp;
+        while (num > 0) {
+            temp = numberA;
+            numberA = numberA + numberB;
+            numberB = temp;
+            num--;
+        }
+        return numberB;
+    }
+
+    function isFibonacci() {
+        let num = parseInt(prompt("Nhập số Nguyên Bất kì:"));
+        if (checkFibonacci(num) == num) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    alert(isFibonacci());
+</script>
+</body>
+</html>
